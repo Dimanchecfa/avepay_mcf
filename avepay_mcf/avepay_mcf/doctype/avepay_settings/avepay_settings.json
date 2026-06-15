@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-06-14 18:05:21.280243",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_api",
+  "base_url",
+  "nim",
+  "col_api",
+  "isf",
+  "api_key",
+  "sec_behavior",
+  "offline_behavior",
+  "sec_tax",
+  "tax_mappings",
+  "sec_pay",
+  "payment_mappings"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_api",
+   "fieldtype": "Section Break",
+   "label": "Connexion API"
+  },
+  {
+   "default": "https://api-mcf-orchestrator.toolsite.io",
+   "fieldname": "base_url",
+   "fieldtype": "Data",
+   "label": "Base URL"
+  },
+  {
+   "fieldname": "nim",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NIM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_api",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "isf",
+   "fieldtype": "Data",
+   "label": "ISF"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Cle API (ak_live_...)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec_behavior",
+   "fieldtype": "Section Break",
+   "label": "Comportement"
+  },
+  {
+   "default": "Bloquer la validation",
+   "fieldname": "offline_behavior",
+   "fieldtype": "Select",
+   "label": "Si MCF hors-ligne",
+   "options": "Bloquer la validation\nFile d'attente"
+  },
+  {
+   "fieldname": "sec_tax",
+   "fieldtype": "Section Break",
+   "label": "Mapping taxes -> groupes SECEF"
+  },
+  {
+   "fieldname": "tax_mappings",
+   "fieldtype": "Table",
+   "label": "Taxes",
+   "options": "AvePay Tax Mapping"
+  },
+  {
+   "fieldname": "sec_pay",
+   "fieldtype": "Section Break",
+   "label": "Mapping modes de paiement"
+  },
+  {
+   "fieldname": "payment_mappings",
+   "fieldtype": "Table",
+   "label": "Paiements",
+   "options": "AvePay Payment Mapping"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-06-14 18:05:21.280243",
+ "modified_by": "Administrator",
+ "module": "AvePay MCF",
+ "name": "AvePay Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
